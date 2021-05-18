@@ -1,0 +1,43 @@
+﻿<Window x:Class="WpfDZ_16._05._2021.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:WpfDZ_16._05._2021"
+        mc:Ignorable="d"
+        Title="MainWindow" Height="450" Width="800">
+    <Grid>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="2*"/>
+            <ColumnDefinition Width="1*"/>
+        </Grid.ColumnDefinitions>
+        <DataGrid x:Name="BookDataGrid" Grid.Column="1" SelectionChanged="BookDataGrid_SelectionChanged"/>
+        <Grid>
+            <Grid.RowDefinitions>
+                <RowDefinition Height="1*"/>
+                <RowDefinition Height="1*"/>
+                <RowDefinition Height="1*"/>
+                <RowDefinition Height="1*"/>
+                <RowDefinition Height="6*"/>
+            </Grid.RowDefinitions>
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="1*"/>
+                <ColumnDefinition Width="3*"/>
+            </Grid.ColumnDefinitions>
+            <Label Content="Название"/>
+            <Label Content="Автор" Grid.Row="1"/>
+            <Label Content="Жанр" Grid.Row="2"/>
+            <Label Content="Издатель" Grid.Row="3"/>
+            <TextBox x:Name="BookName" Grid.Column="1"/>
+            <TextBox x:Name="BookAuthor" Grid.Column="1" Grid.Row="1"/>
+            <TextBox x:Name="BookGenre" Grid.Column="1" Grid.Row="2"/>
+            <TextBox x:Name="BookPublisher" Grid.Column="1" Grid.Row="3"/>
+            <Button x:Name="ButtonAdd" Content="Добавить" HorizontalAlignment="Center" Margin="0,198,0,0" Grid.Row="4" VerticalAlignment="Top" Width="113" Click="ButtonAdd_Click"/>
+            <Button x:Name="BottonConnect" Content="Подключиться к БД" Grid.Column="1" HorizontalAlignment="Left" Margin="154,198,0,0" Grid.Row="4" VerticalAlignment="Top" Click="BottonConnect_Click"/>
+            <Label x:Name="LabelInfo" HorizontalAlignment="Left" Margin="0,157,0,0" Grid.Row="4" VerticalAlignment="Top" Grid.ColumnSpan="2" Width="533" Height="36"/>
+            <Button Content="Удалить" Grid.Column="1" HorizontalAlignment="Left" Margin="310,198,0,0" Grid.Row="4" VerticalAlignment="Top" Click="Button_Click"/>
+        </Grid>
+        <Button x:Name="ButtonEdit" Content="Изменить" HorizontalAlignment="Left" Margin="149,370,0,0" VerticalAlignment="Top" Width="101" Click="ButtonEdit_Click"/>
+
+    </Grid>
+</Window>
